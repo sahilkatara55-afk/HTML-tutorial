@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IPL Teams</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        .team{
+            cursor: pointer;
+            color: blue;
+            margin: 5px 0;
+        }
+        .team:hover{
+            text-decoration: underline;
+        }
+        .players{
+            margin-left: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h1>IPL Teams</h1>
+
+<!-- Team List -->
+<div class="team" onclick="showPlayers('mi')">Mumbai Indians</div>
+<div id="mi" class="players">
+    <p><b>Captain:</b> Hardik Pandya</p>
+    <p>Players: Rohit, Ishan, Bumrah, Surya, Tilak</p>
+</div>
+
+<div class="team" onclick="showPlayers('csk')">Chennai Super Kings</div>
+<div id="csk" class="players">
+    <p><b>Captain:</b> Ruturaj Gaikwad</p>
+    <p>Players: Jadeja, Conway, Rahane, Pathirana</p>
+</div>
+
+<div class="team" onclick="showPlayers('rcb')">Royal Challengers Bangalore</div>
+<div id="rcb" class="players">
+    <p><b>Captain:</b> Faf du Plessis</p>
+    <p>Players: Virat, Maxwell, Siraj, Patidar</p>
+</div>
+
+<div class="team" onclick="showPlayers('kkr')">Kolkata Knight Riders</div>
+<div id="kkr" class="players">
+    <p><b>Captain:</b> Shreyas Iyer</p>
+    <p>Players: Russell, Narine, Rinku, Varun</p>
+</div>
+
+<div class="team" onclick="showPlayers('rr')">Rajasthan Royals</div>
+<div id="rr" class="players">
+    <p><b>Captain:</b> Sanju Samson</p>
+    <p>Players: Buttler, Jaiswal, Boult, Hetmyer</p>
+</div>
+
+<div class="team" onclick="showPlayers('srh')">Sunrisers Hyderabad</div>
+<div id="srh" class="players">
+    <p><b>Captain:</b> Pat Cummins</p>
+    <p>Players: Klaasen, Abhishek, Markram, Bhuvi</p>
+</div>
+
+<div class="team" onclick="showPlayers('dc')">Delhi Capitals</div>
+<div id="dc" class="players">
+    <p><b>Captain:</b> Rishabh Pant</p>
+    <p>Players: Warner, Axar, Kuldeep, Marsh</p>
+</div>
+
+<div class="team" onclick="showPlayers('lsg')">Lucknow Super Giants</div>
+<div id="lsg" class="players">
+    <p><b>Captain:</b> KL Rahul</p>
+    <p>Players: Stoinis, Pooran, Bishnoi, Hooda</p>
+</div>
+
+<div class="team" onclick="showPlayers('gt')">Gujarat Titans</div>
+<div id="gt" class="players">
+    <p><b>Captain:</b> Shubman Gill</p>
+    <p>Players: Rashid, Miller, Tewatia, Noor</p>
+</div>
+
+<div class="team" onclick="showPlayers('pbks')">Punjab Kings</div>
+<div id="pbks" class="players">
+    <p><b>Captain:</b> Shikhar Dhawan</p>
+    <p>Players: Livingstone, Bairstow, Arshdeep, Jitesh</p>
+</div>
+
+
+<script>
+function showPlayers(id){
+    let all = document.getElementsByClassName('players');
+
+    for(let i=0;i<all.length;i++){
+        all[i].style.display = 'none';
+    }
+
+    document.getElementById(id).style.display = 'block';
+}
+</script>
+
+</body>
+</html>
